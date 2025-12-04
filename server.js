@@ -69,7 +69,9 @@ function authed(req, res, next) {
 
 // --- base template ---
 function pageTemplate(body) {
-  return `<!doctype html><html><head><meta charset="utf-8"><title>Password Manager</title></head>
+  return `<!doctype html><html><head><meta charset="utf-8"><title>Password Manager</title>
+   <link rel="icon" type="image/x-icon" href="./img.jpg">
+  </head>
   <body>
     <h2 align="center">Password Manager</h2>
     ${body}
@@ -294,3 +296,4 @@ app.get("/pw/:id", authed, async (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`🚀 Server running: http://localhost:${PORT}`));
+
